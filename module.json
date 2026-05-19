@@ -1,6 +1,6 @@
 {
     "id": "ID_PLACEHOLDER",
-    "title": "Aeris Smooth Camera",
+    "title": "Smooth Camera",
     "description": "Implements smooth camera panning and zooming",
     "esmodules": ["main.bundle.js"],
     "compatibility": {
@@ -8,7 +8,7 @@
         "verified": "14",
         "maximum": "14"
     },
-    "version": "VERSION_TAG",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "Robin Chand",
