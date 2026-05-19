@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:gitlab.com)",
+      "WebFetch(domain:foundryvtt.com)",
+      "WebFetch(domain:foundryvtt.wiki)",
+      "WebFetch(domain:discord.com)",
+      "WebFetch(domain:pixijs.com)",
+      "WebFetch(domain:github.com)"
+    ]
+  }
+}
