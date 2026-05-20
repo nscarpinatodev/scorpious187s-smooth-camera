@@ -11,7 +11,11 @@
       "PowerShell(Get-Item \"$env:USERPROFILE\\\\AppData\\\\Local\\\\FoundryVTT\\\\Data\\\\modules\\\\smooth_camera\" | Select-Object FullName, LinkType, Target)",
       "PowerShell(\\(Get-Item \"$env:USERPROFILE\\\\AppData\\\\Local\\\\FoundryVTT\\\\Data\\\\modules\\\\smooth_camera\"\\).Attributes; [System.IO.Directory]::ResolveLinkTarget\\(\"$env:USERPROFILE\\\\AppData\\\\Local\\\\FoundryVTT\\\\Data\\\\modules\\\\smooth_camera\", $true\\))",
       "PowerShell(cmd /c \"fsutil reparsepoint query \"\"$env:USERPROFILE\\\\AppData\\\\Local\\\\FoundryVTT\\\\Data\\\\modules\\\\smooth_camera\"\" 2>&1 | Select-Object -First 5\")",
-      "Bash(fsutil reparsepoint *)"
+      "Bash(fsutil reparsepoint *)",
+      "Bash(mv \"c:/Users/djsco/OneDrive/Documents/GitHub/smooth_camera/smooth_camera.code-workspace\" \"c:/Users/djsco/OneDrive/Documents/GitHub/smooth_camera/smooth-camera.code-workspace\" && mv \"c:/Users/djsco/OneDrive/Documents/GitHub/smooth_camera\" \"c:/Users/djsco/OneDrive/Documents/GitHub/smooth-camera\" 2>&1)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\djsco\\OneDrive\\Documents\\GitHub"
     ]
   }
 }

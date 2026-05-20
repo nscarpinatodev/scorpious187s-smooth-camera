@@ -2,22 +2,16 @@
     "id": "smooth-camera",
     "title": "Smooth Camera",
     "description": "Implements smooth camera panning and zooming",
-    "esmodules": ["main.bundle.js"],
-    "compatibility": {
-        "minimum": "13",
-        "verified": "14"
-    },
     "version": "1.0.0",
+    "compatibility": {
+        "minimum": "13.351",
+        "verified": "14.361"
+    },
     "authors": [
         {
-            "name": "Robin Chand",
-            "discord": "robxnlifts"
+            "name": "Nicholas Scarpinato",
+            "discord": "Scorpious187"
         }
     ],
-    "manifest": "https://aeris-fvtt.gitlab.io/ID_PLACEHOLDER/module.json",
-    "download": "https://gitlab.com/api/v4/projects/PROJECT_ID/packages/generic/ID_PLACEHOLDER/VERSION_TAG/ID_PLACEHOLDER-VERSION_TAG.zip",
-    "relationships": {
-        "requires": [],
-        "recommends": []
-    }
+    "esmodules": ["scripts/main.bundle.js"]
 }
