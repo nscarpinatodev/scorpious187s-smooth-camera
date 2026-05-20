@@ -1,19 +1,19 @@
 declare module "fvtt-types/configuration" {
     interface SettingConfig {
-        "aeris-smooth-camera.enableSmoothCamera": boolean;
-        "aeris-smooth-camera.cameraPanSpeed": number;
-        "aeris-smooth-camera.cameraZoomSpeed": number;
+        "smooth-camera.enableSmoothCamera": boolean;
+        "smooth-camera.cameraPanSpeed": number;
+        "smooth-camera.cameraZoomSpeed": number;
     }
 
     interface Storage {
-        "aeris-smooth-camera.enableSmoothCamera": boolean;
-        "aeris-smooth-camera.cameraPanSpeed": number;
-        "aeris-smooth-camera.cameraZoomSpeed": number;
+        "smooth-camera.enableSmoothCamera": boolean;
+        "smooth-camera.cameraPanSpeed": number;
+        "smooth-camera.cameraZoomSpeed": number;
     }
     interface WorldSettings {
-        "aeris-smooth-camera.enableSmoothCamera": boolean;
-        "aeris-smooth-camera.cameraPanSpeed": number;
-        "aeris-smooth-camera.cameraZoomSpeed": number;
+        "smooth-camera.enableSmoothCamera": boolean;
+        "smooth-camera.cameraPanSpeed": number;
+        "smooth-camera.cameraZoomSpeed": number;
     }
 
     // V13/V14: _constrainView returns Omit<CanvasViewPosition, "level">

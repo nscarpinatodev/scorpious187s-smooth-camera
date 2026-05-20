@@ -3,13 +3,13 @@ declare global {
         __targetScale?: number;
     }
 
-    var aerisSmoothCamera: {
+    var smoothCamera: {
         killCustomPan: () => void;
         killCustomWheel: () => void;
     };
 
     interface GlobalThis {
-        aerisSmoothCamera: typeof aerisSmoothCamera;
+        smoothCamera: typeof smoothCamera;
     }
 }
 

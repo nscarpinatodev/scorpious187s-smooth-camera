@@ -23,7 +23,7 @@ Hooks.once("canvasReady", () => {
 Hooks.once("ready", () => {
     if (!isSmoothCameraEnabled()) return;
 
-    globalThis.aerisSmoothCamera = {
+    globalThis.smoothCamera = {
         killCustomPan,
         killCustomWheel,
     };

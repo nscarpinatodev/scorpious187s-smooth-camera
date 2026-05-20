@@ -16,13 +16,13 @@ export default defineConfig(({ mode }) => {
                 ],
             }),
         ],
-        base: isDev ? `/modules/aeris-smooth-camera/` : "./",
+        base: isDev ? `/modules/smooth-camera/` : "./",
 
         server: isDev
             ? {
                   port: 30001,
                   proxy: {
-                      [`^/(?!modules/aeris-smooth-camera)`]:
+                      [`^/(?!modules/smooth-camera)`]:
                           "http://localhost:30000",
                       "/socket.io": {
                           target: "ws://localhost:30000",

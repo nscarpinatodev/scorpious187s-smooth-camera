@@ -22,7 +22,7 @@ const foundryModules =
               "modules"
           ));
 
-const moduleName = "aeris-smooth-camera";
+const moduleName = "smooth-camera";
 const modulePath = join(foundryModules, moduleName);
 
 async function main() {

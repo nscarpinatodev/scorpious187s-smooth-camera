@@ -1,1 +1,1 @@
-export const MODULE_ID = "aeris-smooth-camera";
+export const MODULE_ID = "smooth-camera";
