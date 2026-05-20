@@ -4,12 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "lint": "eslint . --ext .ts,.js",
         "type-check": "tsc --noEmit",
-        "link:dev": "node scripts/link-dev.js",
-        "dev": "npm run link:dev && vite dev",
-        "link:dist": "node scripts/link-dist.js",
-        "build": "npm run link:dist && npm run type-check && vite build && node scripts/inject-id.js"
+        "build": "npm run type-check && vite build"
     },
     "keywords": [],
     "author": "",
@@ -19,8 +15,5 @@
         "typescript": "^5.8.3",
         "vite": "^6.3.2",
         "vite-plugin-static-copy": "^2.3.1"
-    },
-    "dependencies": {
-        "symlink-dir": "^6.0.5"
     }
 }

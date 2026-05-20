@@ -7,7 +7,11 @@
       "Bash(pnpm install *)",
       "Bash(pnpm type-check *)",
       "Bash(./node_modules/.bin/tsc --noEmit)",
-      "WebFetch(domain:api.github.com)"
+      "WebFetch(domain:api.github.com)",
+      "PowerShell(Get-Item \"$env:USERPROFILE\\\\AppData\\\\Local\\\\FoundryVTT\\\\Data\\\\modules\\\\smooth_camera\" | Select-Object FullName, LinkType, Target)",
+      "PowerShell(\\(Get-Item \"$env:USERPROFILE\\\\AppData\\\\Local\\\\FoundryVTT\\\\Data\\\\modules\\\\smooth_camera\"\\).Attributes; [System.IO.Directory]::ResolveLinkTarget\\(\"$env:USERPROFILE\\\\AppData\\\\Local\\\\FoundryVTT\\\\Data\\\\modules\\\\smooth_camera\", $true\\))",
+      "PowerShell(cmd /c \"fsutil reparsepoint query \"\"$env:USERPROFILE\\\\AppData\\\\Local\\\\FoundryVTT\\\\Data\\\\modules\\\\smooth_camera\"\" 2>&1 | Select-Object -First 5\")",
+      "Bash(fsutil reparsepoint *)"
     ]
   }
 }
