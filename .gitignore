@@ -4,3 +4,4 @@ dev/
 .env
 pnpm-lock.yaml
 package-lock.json
+*.zip
