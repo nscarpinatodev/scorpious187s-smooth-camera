@@ -14,7 +14,15 @@
       "Bash(fsutil reparsepoint *)",
       "Bash(mv \"c:/Users/djsco/OneDrive/Documents/GitHub/smooth_camera/smooth_camera.code-workspace\" \"c:/Users/djsco/OneDrive/Documents/GitHub/smooth_camera/smooth-camera.code-workspace\" && mv \"c:/Users/djsco/OneDrive/Documents/GitHub/smooth_camera\" \"c:/Users/djsco/OneDrive/Documents/GitHub/smooth-camera\" 2>&1)",
       "Bash(npm run *)",
-      "WebSearch"
+      "WebSearch",
+      "PowerShell(gh release list --repo nscarpinatodev/smooth-camera 2>$null)",
+      "PowerShell(if \\(-not $?\\) { \"no gh releases or repo not found\" })",
+      "PowerShell(git -C \"c:\\\\Users\\\\djsco\\\\OneDrive\\\\Documents\\\\GitHub\\\\smooth-camera\" remote -v)",
+      "PowerShell(gh auth status 2>&1)",
+      "PowerShell(cd \"c:\\\\Users\\\\djsco\\\\OneDrive\\\\Documents\\\\GitHub\\\\smooth-camera\"; Add-Type -AssemblyName System.IO.Compression.FileSystem; $zip = Join-Path \\(Get-Location\\) \"smooth-camera.zip\"; if \\(Test-Path $zip\\) { Remove-Item $zip -Force }; $fs = [System.IO.Compression.ZipFile]::Open\\($zip, 'Create'\\); [System.IO.Compression.ZipFileExtensions]::CreateEntryFromFile\\($fs, \\(Join-Path \\(Get-Location\\) \"module.json\"\\), \"module.json\"\\) | Out-Null; [System.IO.Compression.ZipFileExtensions]::CreateEntryFromFile\\($fs, \\(Join-Path \\(Get-Location\\) \"scripts\\\\main.bundle.js\"\\), \"scripts/main.bundle.js\"\\) | Out-Null; $fs.Dispose\\(\\); \"--- zip contents ---\"; [System.IO.Compression.ZipFile]::OpenRead\\($zip\\).Entries | ForEach-Object { $_.FullName })",
+      "PowerShell($u = \"https://github.com/nscarpinatodev/smooth_camera/releases/latest/download/module.json\"; try { $r = Invoke-WebRequest -Uri $u -MaximumRedirection 5 -UseBasicParsing; \"HTTP $\\($r.StatusCode\\)\"; \\($r.Content | ConvertFrom-Json\\) | Select-Object id, version, manifest, download | Format-List } catch { \"ERROR: $\\($_.Exception.Message\\)\" })",
+      "PowerShell($u = \"https://github.com/nscarpinatodev/smooth_camera/releases/latest/download/module.json\"; $r = Invoke-WebRequest -Uri $u -MaximumRedirection 5 -UseBasicParsing; \"Content-Type: $\\($r.Headers['Content-Type']\\)\"; \"Length: $\\($r.RawContentLength\\)\"; \"First 200 chars:\"; $r.Content.Substring\\(0, [Math]::Min\\(200, $r.Content.Length\\)\\))",
+      "PowerShell($u = \"https://github.com/nscarpinatodev/smooth_camera/releases/latest/download/module.json\"; $r = Invoke-WebRequest -Uri $u -MaximumRedirection 5 -UseBasicParsing; $json = [System.Text.Encoding]::UTF8.GetString\\($r.Content\\) | ConvertFrom-Json; $json | Select-Object id, version, @{n='compat';e={\"$\\($_.compatibility.minimum\\) - $\\($_.compatibility.verified\\)\"}}, manifest, download | Format-List; \"--- zip asset reachable? ---\"; \\(Invoke-WebRequest \"https://github.com/nscarpinatodev/smooth_camera/releases/download/v1.0.0/smooth-camera.zip\" -Method Head -MaximumRedirection 5 -UseBasicParsing\\).StatusCode)"
     ],
     "additionalDirectories": [
       "c:\\Users\\djsco\\OneDrive\\Documents\\GitHub"
