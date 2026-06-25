@@ -1,1 +1,1 @@
-export const MODULE_ID = "smooth-camera";
+export const MODULE_ID = "scorpious187s-smooth-camera";
